@@ -1,7 +1,7 @@
 
-const Backdrop = () => {
+const Backdrop = (props) => {
   return(
-    <div className ='backdrop'></div>
+    <div className ='backdrop' onClick={props.onClick} />
   )
 }
 

@@ -9,6 +9,10 @@ const Todo = (props) => {
     setShowModal(true);
 
   };
+
+  const closeModal = () => {
+    setShowModal(false);
+  }
   return(
 
     <div className='card'>
@@ -16,8 +20,8 @@ const Todo = (props) => {
         <div className='actions'> 
         <button className='btn' onClick={deleteHandler}>Delete</button>
         </div>
-        { showModal ? <Modal /> : null }
-        { showModal ? <Backdrop /> : null}
+        { showModal && <Modal /> }
+        { showModal && <Backdrop onClick={closeModal}/>}
       </div>
     
   );

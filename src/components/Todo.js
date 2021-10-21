@@ -20,7 +20,7 @@ const Todo = (props) => {
         <div className='actions'> 
         <button className='btn' onClick={deleteHandler}>Delete</button>
         </div>
-        { showModal && <Modal /> }
+        { showModal && <Modal onCancel={closeModal} onConfirm={closeModal}/> }
         { showModal && <Backdrop onClick={closeModal}/>}
       </div>
     
